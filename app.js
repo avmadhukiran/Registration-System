@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-// var port=Number(process.env.PORT || 3000);
+ var port=Number(process.env.PORT || 3000);
 var path = require('path');
 var bodyParser = require('body-parser')
 var Datastore = require('nedb'), db = new Datastore({filename : 'datafile'});
@@ -40,6 +40,6 @@ if(docs.length)
 
 
 
-app.listen(3000,function () {
+app.listen(port,function () {
   console.log('Example app listening on port 3000!');
 });
