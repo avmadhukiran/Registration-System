@@ -30,7 +30,7 @@ if(docs.length)
   	db.insert({aarohanid:req.body.aarohanid,sel1:req.body.sel1},function(err,newDoc){
   		console.log("new doc inserted")
   		console.log(newDoc)
-  	res.send('welcome' + req.body.aarohanid+'brooo')	
+  	res.send('welcome' + req.body.aarohanid+' brooo')	
   	})
    })
   
@@ -40,6 +40,6 @@ if(docs.length)
 
 
 
-app.listen(3000,function () {
+app.listen(port,function () {
   console.log('Example app listening on port 3000!');
 });
