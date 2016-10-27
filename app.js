@@ -40,6 +40,6 @@ if(docs.length)
 
 
 
-app.listen(port,function () {
+app.listen(3000,function () {
   console.log('Example app listening on port 3000!');
 });
