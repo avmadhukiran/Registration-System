@@ -11,7 +11,7 @@
     "example",
     "heroku"
   ],
-  "author": "jane-doe",
+  "author": "Akhilesh_Madhu",
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",

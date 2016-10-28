@@ -1,150 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Aarohan</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aarohan</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- Favicon and touch icons -->
 
-    </head>
 
-    <body>
 
-		<!-- Top menu -->
-		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Aarohan Registration Form </a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="top-navbar-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<span class="li-text">
-								register with 
-							</span> 
-							<a href="#"><strong>links</strong></a> 
-							<span class="li-text">
-								
-							</span> 
-							<span class="li-social">
-								<a href="#"><i class="fa fa-facebook"></i></a> 
-								<a href="#"><i class="fa fa-twitter"></i></a> 
-								<a href="#"><i class="fa fa-envelope"></i></a> 
-								<a href="#"><i class="fa fa-skype"></i></a>
-							</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
 
-        <!-- Top content -->
-        <div class="top-content">
-        	
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Aarohan</strong> Registration Form</h1>
-                            <div class="description">
-                            	<p>
-	                            Aarohan is an event for school people	 
-                                </p>
-                            </div>
+
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/retina-1.1.0.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+<body>
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1 style="color:white;"><strong>Aarohan</strong> Registration Form</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-3 form-box ">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Aarohan</h3>
+                            <p>Fill in the form below</p>
+
+                            <p id="message" style="color:red;"></p>
+
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
                         </div>
                     </div>
-                    <div class="row">
-                    	<div class="col-sm-6 phone">
-                    		<img src="assets/img/iphone.png" alt="">
-                    	</div>
-                        <div class="col-sm-5 form-box">
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>Aarohan</h3>
-                            		<p>Fill in the form below to get instant access:</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-pencil"></i>
-                        		</div>
-                            </div>
-                            <div class="form-bottom">
-			                    <form role="form" action="/check" method="post" class="registration-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-first-name">First name</label>
-			                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-last-name">Last name</label>
-			                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-school">School</label>
-			                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-			                        </div>
-                                    <div class="form-group">
-			                        	<label class="sr-only" for="aarohanid">Event name</label>
-			                        	<input type="text" name="aarohanid" placeholder="aarohanid" class="form-email form-control" id="form-control">
-			                        </div>
-                                    <div class="form-group">
-                                      <select class="form-control" id="sel1">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                      </select>
-                                    </div>
-			                        <button type="submit" class="btn">Sign me up!</button>
-			                    </form>
-		                    </div>
+                    <div class="form-bottom">
+
+                      <form id="theForm" role="form" class="registration-form">
+                        <div id="content">
+                          <div class="form-group">
+                              <label class="sr-only" for="aarohanid">Aarohan ID</label>
+                              <input type="text" reqired name="aarohanid" value="ARHN"   placeholder="Aarohan ID" class="form-email form-control" id="form-id">
+                          </div>
+
+
+                          <div class="form-group">
+                              <label class="sr-only" for="form-first-name">Name</label>
+                              <input type="text" reqired name="names" placeholder="Student Name" class="form-first-name form-control" id="form-name">
+                          </div>
+
+                          <div class="form-group">
+                              <label class="sr-only" for="form-school">School</label>
+                              <input type="text" reqired name="school" placeholder="School Name" class="form-email form-control" id="form-school">
+                          </div>
                         </div>
+
+                              <button type="submit" id="register" class="btn">Register</button>
+                              <button  id="refresh" class="btn">Add New</button>
+                        </form>
+                        <br>
+                        <div class="alert alert-danger" id="danger">
+                              <strong>Error!</strong> Invalid input or Aarohan ID already in use.
+                          </div>
+                          <div class="alert alert-danger" id="length">
+                                <strong>Error!</strong> Invalid Input! Check if all fields have been filled propperly!
+                            </div>
+                          <div class="alert alert-success" id="success">
+                              Student Sucessfully Registered.
+                          </div>
                     </div>
                 </div>
             </div>
-            
         </div>
+    </div>
 
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/retina-1.1.0.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
 
-    </body>
+    <script>
+          $('#danger').hide();
+          $('#length').hide();
+          $("#success").hide();
+          $("#refresh").hide();
+          $("#register").show();
+          $("#content").show();
+
+          $(function() {
+              $("#register").click(function() {
+                  $('#danger').hide();
+                  $('#length').hide();
+                  $("#success").hide();
+                  $("#refresh").hide();
+                  $("#register").show();
+                  $("#content").show();
+
+                  var aid = $("input#form-id").val();
+                  var nam=$("input#form-name").val();
+                  var sch=$("input#form-school").val();
+
+                if(aid.length==8 && nam.length!=0 && sch.length!=0){
+                  $.ajax({
+                      type: "POST",
+                      url: "/check",
+                      data: {
+                          aarohanid: aid,
+                          names: nam,
+                          school:sch
+                      },
+                      success: function(data) {
+                          console.log(data);
+                          if (data == 1) {
+                              $("#danger").show();
+                              $("#sucess").hide();
+                              $('#length').hide();
+                              $("#refresh").hide();
+                              $("#register").show();
+                              $("#content").show();
+
+
+                          } else {
+                              $('#success').show()
+                              $('#danger').hide()
+                              $('#length').hide();
+                              $("#refresh").show();
+                              $("#register").hide();
+                              $("#content").hide();
+
+
+                          }
+                      }
+                  });
+
+                }else{
+                  $("#danger").hide();
+                  $('#length').show();
+                  $("#sucess").hide();
+                  $("#refresh").hide();
+                  $("#register").show();
+                  $("#content").show();
+
+                }
+                  return false;
+              });
+          });
+
+          $("#refresh").click(function() {
+            $("theForm").reset();
+          });
+
+
+      </script>
+
+</body>
 
 </html>
