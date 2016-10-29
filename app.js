@@ -3,15 +3,18 @@ var app = express();
 var port = Number(process.env.PORT || 3000);
 var path = require('path');
 var bodyParser = require('body-parser')
-var Datastore = require('nedb'),
-    db = new Datastore({
-        filename: 'datafile'
-    });
-db.loadDatabase();
-var doc = {
-    aarohanid: '123456',
-    sel1: 'event1'
-}
+// var Datastore = require('nedb'),
+//     db = new Datastore({
+//         filename: 'datafile'
+//     });
+// db.loadDatabase();
+// var doc = {
+//     aarohanid: '123456',
+//     sel1: 'event1'
+// }
+
+var mongojs   = require('mongojs')
+var db = mongojs('mongodb://aarohan2k16:aarohan2k16@ds137267.mlab.com:37267/aarohan16', ['aarohanregistrationpage']);
 
 var urlencodedParser = bodyParser.urlencoded({
     extended: false
@@ -24,7 +27,9 @@ app.get('/', function(req, res) {
     });
 });
 
-
+db.on('connect', function () {
+    console.log('database connected')
+})
 
 
 
@@ -33,11 +38,11 @@ app.get('/', function(req, res) {
         app.post('/check', urlencodedParser, function(req, res) {
             if (!req.body) return res.sendStatus(400)
             {
-              db.find({aarohanid: req.body.aarohanid}, function(err, docs) {
+              db.aarohanregistrationpage.find({aarohanid: req.body.aarohanid}, function(err, docs) {
                     if (docs.length != 0) {
                       res.send('1');
                     } else
-                        db.insert({aarohanid: req.body.aarohanid,names: req.body.names,school: req.body.school}, function(err, newDoc) {
+                        db.aarohanregistrationpage.insert({aarohanid: req.body.aarohanid,names: req.body.names,school: req.body.school}, function(err, newDoc) {
                           res.send('2')
 
                         });
@@ -47,6 +52,6 @@ app.get('/', function(req, res) {
 
 
 
-        app.listen(port, function() {
+        app.listen(3000, function() {
             console.log('Example app listening on port 3000!');
         });
