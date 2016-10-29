@@ -6,7 +6,7 @@ body {
     color: #888;
     line-height: 30px;
     text-align: center;
-    background-color: #A8AD9F;
+    background-image: url('background.png');
 }
 
 strong { font-weight: 500; }
