@@ -151,7 +151,7 @@ ul.navbar-nav {
 .form-top {
 	overflow: hidden;
 	padding: 0 25px 15px 25px;
-	background: #fff;
+	background-color: transparent;
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
 	text-align: left;
 }
@@ -176,15 +176,21 @@ ul.navbar-nav {
 
 .form-bottom {
 	padding: 25px 25px 30px 25px;
-	background: #eee;
+	background-color:transparent ;
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
 }
 
 .form-bottom form textarea {
 	height: 100px;
+	background-color: transparent;
+
 }
 
 .form-bottom form .input-error {
 	border-color: #19b9e7;
+
+}
+.form-group{
+padding: 12px 20px;
 }
