@@ -11,7 +11,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/form-elements.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -19,7 +18,6 @@
 <script src="assets/js/jquery-1.11.1.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.backstretch.min.js"></script>
-<script src="assets/js/retina-1.1.0.min.js"></script>
 <script src="assets/js/scripts.js"></script>
 <body>
 <div class="inner-html">
@@ -50,22 +48,32 @@
                         <div id="content">
                           <div class="form-group">
                               <label class="sr-only" for="aarohanid">Aarohan ID</label>
-                              <input type="text" reqired name="aarohanid" value="ARHN"   placeholder="Aarohan ID" class="form-email form-control" id="form-id">
+                              <input type="text" required name="aarohanid" value="ARHN"   placeholder="Aarohan ID" class="form-email form-control" id="form-id">
                           </div>
 
 
                           <div class="form-group">
                               <label class="sr-only" for="form-first-name">Name</label>
-                              <input type="text" reqired name="names" placeholder="Student Name" class="form-first-name form-control" id="form-name">
+                              <input type="text" required name="names" placeholder="Student Name" class="form-first-name form-control" id="form-name">
                           </div>
 
                           <div class="form-group">
                               <label class="sr-only" for="form-school">School</label>
-                              <input type="text" reqired name="school" placeholder="School Name" class="form-email form-control" id="form-school">
+                              <input type="text" required name="school" placeholder="School Name" class="form-email form-control" id="form-school">
                           </div>
+                          <div class="form-group">
+                            <select id="category">
+    <option value="" disabled="disabled" selected="selected">Please select a name</option>
+    <option value="1">Junior</option>
+    <option value="2">Senior</option>
+</select>
+
+
+                              </div>
+
                         </div>
 
-                              <button type="submit" id="register" class="btn">Register</button>
+                              <button type="submit" id="register" class="btn ">Register</button>
                               <button  id="refresh" class="btn">Add New</button>
                         </form>
                         <br>
@@ -93,7 +101,6 @@
           $("#register").show();
           $("#content").show();
 
-          $(function() {
               $("#register").click(function() {
                   $('#danger').hide();
                   $('#length').hide();
@@ -105,15 +112,18 @@
                   var aid = $("input#form-id").val();
                   var nam=$("input#form-name").val();
                   var sch=$("input#form-school").val();
+                  var cat=$("#category option:selected").text();
+                if(aid.length==8 && nam.length!=0 && sch.length!=0 )
+                {
 
-                if(aid.length==8 && nam.length!=0 && sch.length!=0){
                   $.ajax({
                       type: "POST",
                       url: "/check",
                       data: {
                           aarohanid: aid,
                           names: nam,
-                          school:sch
+                          school:sch,
+                          category:cat
                       },
                       success: function(data) {
                           console.log(data);
@@ -150,7 +160,7 @@
                 }
                   return false;
               });
-          });
+
 
           $("#refresh").click(function() {
             $("theForm").reset();

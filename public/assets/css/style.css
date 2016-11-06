@@ -6,7 +6,6 @@ body {
     color: #888;
     line-height: 30px;
     text-align: center;
-    background-image: url('background.png');
 }
 
 strong { font-weight: 500; }
@@ -72,7 +71,7 @@ img { max-width: 100%; }
     color: #fff;
     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
-.btn-link-2:hover, .btn-link-2:focus, 
+.btn-link-2:hover, .btn-link-2:focus,
 .btn-link-2:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
 
 
@@ -105,7 +104,7 @@ ul.navbar-nav {
 	font-size: 28px;
 	vertical-align: middle;
 }
-.navbar-inverse ul.navbar-nav li .li-social a:hover, 
+.navbar-inverse ul.navbar-nav li .li-social a:hover,
 .navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #19b9e7; }
 
 .navbar-brand {
@@ -137,7 +136,7 @@ ul.navbar-nav {
 .top-content .description a {
 	color: #fff;
 }
-.top-content .description a:hover, 
+.top-content .description a:hover,
 .top-content .description a:focus { border-bottom: 1px dotted #fff; }
 
 .top-content .top-big-link {

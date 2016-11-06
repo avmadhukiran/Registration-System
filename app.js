@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT || 8000);
 var path = require('path');
 var bodyParser = require('body-parser')
 // var Datastore = require('nedb'),
@@ -42,7 +42,7 @@ db.on('connect', function () {
                     if (docs.length != 0) {
                       res.send('1');
                     } else
-                        db.aarohanregistrationpage.insert({aarohanid: req.body.aarohanid,names: req.body.names,school: req.body.school}, function(err, newDoc) {
+                        db.aarohanregistrationpage.insert({aarohanid: req.body.aarohanid,category: req.body.category,names: req.body.names,school: req.body.school}, function(err, newDoc) {
                           res.send('2')
 
                         });
@@ -52,6 +52,6 @@ db.on('connect', function () {
 
 
 
-        app.listen(port, function() {
-            console.log('Example app listening on port 3000!');
+        app.listen(8000, function() {
+            console.log('Example app listening on port 8000!');
         });
