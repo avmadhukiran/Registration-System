@@ -1,5 +1,5 @@
 {
-  "name": "contactlistapp",
+  "name": "Registration-System",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelcheng429/meanstacktutorial.git"
+    "url": "https://github.com/avmadhukiran/Registration-System.git"
   },
-  "author": "",
+  "author": "Madhu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/michaelcheng429/meanstacktutorial/issues"
+    "url": "https://github.com/avmadhukiran/Registration-System.git"
   },
-  "homepage": "https://github.com/michaelcheng429/meanstacktutorial"
+  "homepage": "https://github.com/avmadhukiran/Registration-System.git"
 }
