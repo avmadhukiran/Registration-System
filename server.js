@@ -133,5 +133,5 @@ app.post('/check', function(req, res) {
             }
         });
 
-app.listen(8000);
+app.listen(port);
 console.log("Server running on port 8000");
