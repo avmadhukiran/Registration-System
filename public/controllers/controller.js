@@ -110,7 +110,7 @@ $scope.searcha="ARHN";
 
                     } else {
                         console.log("Entry Already Exists");
-                        alrady();
+                        already();
 
                     }
                 });
