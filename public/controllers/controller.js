@@ -78,21 +78,26 @@ $scope.searcha="ARHN";
                 }
 
                 $http.get('/contactlist/ev/' + $scope.contact.aarohanid).success(function(response) {
+                  console.log(response);
                     if (response.length == 0) {
+
                         if ($scope.contact.category === categorys) {
                             $http.post('/contactlist', $scope.contact).success(function(response) {
                                 refresha();
                             });
-                        } else {
+                        }
+
+                        else {
                             console.log("Student Doest Belong to this Category");
                               belong();
                         }
-                    } else if (response.length == 1) {
+                    }
+                    else if (response.length == 1) {
 
 
                         if (!response[key][events]) {
                             if ($scope.contact.category === categorys) {
-                                $http.post('/contactlist', $scope.contact).success(function(response) {
+                                $http.put('/contactlist/'+events, $scope.contact).success(function(response) {
                                     refresha();
                                 });
                             } else {
@@ -100,18 +105,15 @@ $scope.searcha="ARHN";
                                   belong();
                             }
 
-                        } else {
+                        }
+                        else {
                             console.log("Entry Already Exists here");
                             already();
                         }
 
-
-
-
                     } else {
                         console.log("Entry Already Exists");
                         already();
-
                     }
                 });
             } else {
@@ -120,7 +122,7 @@ $scope.searcha="ARHN";
 
             }
         });
-    };
+    }
 
 
 
