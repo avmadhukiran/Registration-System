@@ -57,6 +57,21 @@ $scope.searcha="ARHN";
         });
     };
 
+    var refresha = function() {
+        $http.get('/contactlist/' + events).success(function(response) {
+            $scope.contactlist = response;
+            $scope.contact = "";
+            added();
+        });
+    };
+    var refreshb = function() {
+        $http.get('/contactlist/' + events).success(function(response) {
+            $scope.contactlist = response;
+            $scope.contact = "";
+            delmes();
+        });
+    };
+
 
     $scope.search = function(name) {};
 
@@ -127,9 +142,9 @@ $scope.searcha="ARHN";
 
 
     $scope.remove = function(id) {
-        console.log(id);
-        $http.delete('/contactlist/' + id).success(function(response) {
-            refresh();
+        $http.put('/contactlist/del/'+events, id).success(function(response) {
+          console.log(response);
+            refreshb();
         });
     };
 

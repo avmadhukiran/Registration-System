@@ -118,6 +118,18 @@ app.put('/contactlist/:evupdate', function (req, res) {
 
 });
 
+
+app.put('/contactlist/del/:evupdate', function (req, res) {
+  var events = req.params.evupdate;
+  var id = req.body.aarohanid;
+  var somejson = {};
+  somejson[events] = false;
+  console.log(somejson);
+    db.contactlist.update({ aarohanid: id },{ $set: somejson} ,true,function (err, doc) {res.json(doc);});
+
+});
+
+
 app.post('/check', function(req, res) {
             if (!req.body) return res.sendStatus(400)
             {

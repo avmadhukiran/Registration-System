@@ -39,6 +39,9 @@
           <div class="alert alert-success" id="success">
               Student Sucessfully Registered.
           </div>
+          <div class="alert alert-success" id="dmes">
+              Student Sucessfully Removed.
+          </div>
 
         <table class="table">
             <thead>
@@ -69,7 +72,7 @@
                     <td>{{contact.names}}</td>
                     <td>{{contact.school}}</td>
                     <td>{{contact.category}}</td>
-                    <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+                    <td><button class="btn btn-danger" ng-click="remove(contact)">Remove</button></td>
                 </tr>
             </tbody>
         </table>
@@ -86,6 +89,7 @@ $('#already').hide();
 $("#nosuch").hide();
 $("#success").hide();
 $("#belong").hide();
+$("#dmes").hide();
 
   function added(){
     $('#def').hide();
@@ -93,6 +97,7 @@ $("#belong").hide();
     $("#nosuch").hide();
     $("#success").show();
     $("#belong").hide();
+    $("#dmes").hide();
 
   }
 
@@ -102,6 +107,7 @@ $("#belong").hide();
     $("#nosuch").hide();
     $("#success").hide();
     $("#belong").show();
+    $("#dmes").hide();
 
   }
   function already(){
@@ -110,6 +116,7 @@ $("#belong").hide();
     $("#nosuch").hide();
     $("#success").hide();
     $("#belong").hide();
+    $("#dmes").hide();
 
   }
 
@@ -119,9 +126,18 @@ $("#belong").hide();
     $("#nosuch").show();
     $("#success").hide();
     $("#belong").hide();
+    $("#dmes").hide();
 
   }
+  function delmes(){
+    $('#def').hide();
+    $('#already').hide();
+    $("#nosuch").hide();
+    $("#success").hide();
+    $("#belong").hide();
+    $("#dmes").show();
 
+  }
 
 </script>
 </body>
